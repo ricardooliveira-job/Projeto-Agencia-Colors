@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sites profissionais responsivos, loja virtual, UX Design - Agência Colors</title>
-    <meta name="description" content="Criação profissional de sites responsivos, lojas virtuais, interface, aplicativos e muito mais. Somos a Agência Colors.">
-    <meta name="keywords" content="site, site responsivo, criação de site, ux design, loja virtual">
+    <meta name="description" content="Somos a Agência Colors, informe sua idade.">
+    <meta name="keywords" content="site, site responsivo">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
@@ -15,101 +15,75 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header>
-        <div><p><a href="index.html" title="página inicial"><img src="imagens/logo-colors-trans.png" alt="Logo Agência Colors"></a></p></div>
-
-        <nav>
-            <ul>
-                <li><a href="#produto" title="Produtos da Agência Colors">Produto</a></li>
-                <li><a href="#ux" title="Criação de interfaces com foco em UX">UX Design</a></li>
-                <li><a href="#motion" title="motion design">Motion</a></li>
-                <li><a href="#brand" title="Brand">Brand</a></li>
-                <li><a href="#print" title="Print">Print</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="produto">
-        <div class="conteudo">
-            <h1>PRODUTO</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-            <p><a href="#" title="" class="cta bt-verde-agua">SAIBA MAIS</a></p>
-        </div>
+    <section class="centraliza">
+        <h2>Verificação de Idade</h2>
+        <p>Informe o ano do seu nascimento para verificarmos se nosso conteúdo é apropriado.</p>
     </section>
 
-
-
-    <section id="ux">
-        <div class="conteudo">
-            <h1>UX DESIGN</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-            <p><a href="#" title="" class="cta">SAIBA MAIS</a></p>
-        </div>
-    </section>
-
-
-    <section id="motion">
-        <div class="conteudo">
-            <h1>MOTION</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-            <p><a href="#" title="" class="cta bt-verde-agua">SAIBA MAIS</a></p>
-        </div>
-    </section>
-
-
-    <section id="brand">
-        <div class="conteudo">
-            <h1>BRAND</h1>
-            <p class="texto-cinza">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-            <p><a href="#" title="" class="cta">SAIBA MAIS</a></p>
-        </div>
-    </section>
-
-
-
-    <section id="print">
-        <div class="conteudo">
-            <h1>PRINT</h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-            <p><a href="#" title="" class="cta">SAIBA MAIS</a></p>
-        </div>
-    </section>
-
-    <!-- Botão de whatsapp flutuante -->
-    <div class="whats">
-        <a href="https://api.whatsapp.com/send?phone=5511999019763" title="mensagem via whatsapp" target="_blank"><img src="imagens/image-whats.png" alt="logo WhatsApp"></a>
-    </div>
-
-    <!-- Barra de acessibilidade -->
-    <div id="acessibilidade">
-        <button onclick="tamTexto(-4)">-</button>
-        <button onclick="tamTexto(18)">&osol;</button>
-        <button onclick="tamTexto(+14)">+</button>
-    </div>
 
     <script>
-        let fonte = 18
-        /* Definindo a função que muda o tamanho do texto */
-        function tamTexto(contador) {
-            if (contador == 18) { 
-                fonte = contador;
-            } else {
-                fonte += contador;
-            }
-            
-            /* Limitando o tamanho */
-            if (fonte >=60){
-                fonte = 60;
-            }else if (fonte <10) {
-                fonte = 10
-            }
+        // o básico (mal) feito
+        /* let nasc = prompt("Digite o ano do seu nascimento com 4 dígitos");
+        document.write("<br>Você tem " +(2021-nasc)+ " anos."); */
 
-            /* Definindo o tamanho da fonte na conteudo */
-        document.querySelector("body").style.fontSize = fonte + "px";
+
+        // pegando o ano atual dinâmicamente
+        /* let nasc = prompt("Digite o ano do seu nascimento com 4 dígitos");
+        let anoAtual = new Date().getFullYear();
+        document.write("Você tem " +(anoAtual-nasc)+ " anos."); */
+
+
+        // adicionando uma condicional que verifica se o usuário é maior de 18 anos e executa algo de acordo com essas resposta
+        /* 
+        let nasc = prompt("Digite o ano do seu nascimento com 4 dígitos");
+        let anoAtual = new Date().getFullYear();
+        let idade = anoAtual - nasc;
+
+        if (idade < 18) {
+            document.write("Você ainda não tem idade para acessar a Agência Colors");
+        } else {
+            document.write("Que bom que você chegou à Agência Colors!");
         }
+        */
+
+
+        // direcionando o usuário para o site se ele for maior de idade.
+        /* 
+        let nasc = prompt("Digite o ano do seu nascimento com 4 dígitos");
+        let anoAtual = new Date().getFullYear();
+        let idade = anoAtual - nasc;
+
+        if (idade < 18) {
+            document.write("Você ainda não tem idade para acessar a Agência Colors");
+        } else {
+            window.location = "inicio.html";
+        };
+        */
+
+
+        // direcionando o usuário de acordo com a idade, após X segundos.
+
+        let nasc = prompt("Digite o ano do seu nascimento com 4 dígitos");
+        let anoAtual = new Date().getFullYear();
+        let idade = anoAtual - nasc;
+
+        if (idade < 18) {
+            document.write("Você ainda não tem idade para acessar a Agência Colors");
+        } else {
+            document.write("Que bom que você veio. Você será redirecionado para o nosso site.");
+            
+            setTimeout( function() {
+                window.location = "inicio.html";
+            }, 3000);
+            
+        };
+
+
+      
+        
+
 
     </script>
-
-
+    
 </body>
 </html>
